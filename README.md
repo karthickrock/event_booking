@@ -608,3 +608,71 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Test Datas:
+
+$users = [
+    // Admins
+    ['name' => 'Admin User 1', 'email' => 'admin1@test.com', 'role' => 'admin', 'phone' => '12345678901'],
+    ['name' => 'Admin User 2', 'email' => 'admin2@test.com', 'role' => 'admin', 'phone' => '12345678902'],
+
+    // Organizers
+    ['name' => 'Event Organizer 1', 'email' => 'organizer1@test.com', 'role' => 'organizer', 'phone' => '23456789011'],
+    ['name' => 'Event Organizer 2', 'email' => 'organizer2@test.com', 'role' => 'organizer', 'phone' => '23456789012'],
+    ['name' => 'Event Organizer 3', 'email' => 'organizer3@test.com', 'role' => 'organizer', 'phone' => '23456789013'],
+
+    // Customers
+    ['name' => 'Customer User 1', 'email' => 'customer1@test.com', 'role' => 'customer', 'phone' => '34567890121'],
+    ['name' => 'Customer User 2', 'email' => 'customer2@test.com', 'role' => 'customer', 'phone' => '34567890122'],
+    ['name' => 'Customer User 3', 'email' => 'customer3@test.com', 'role' => 'customer', 'phone' => '34567890123'],
+    ['name' => 'Customer User 4', 'email' => 'customer4@test.com', 'role' => 'customer', 'phone' => '34567890124'],
+    ['name' => 'Customer User 5', 'email' => 'customer5@test.com', 'role' => 'customer', 'phone' => '34567890125'],
+    ['name' => 'Customer User 6', 'email' => 'customer6@test.com', 'role' => 'customer', 'phone' => '34567890126'],
+    ['name' => 'Customer User 7', 'email' => 'customer7@test.com', 'role' => 'customer', 'phone' => '34567890127'],
+    ['name' => 'Customer User 8', 'email' => 'customer8@test.com', 'role' => 'customer', 'phone' => '34567890128'],
+    ['name' => 'Customer User 9', 'email' => 'customer9@test.com', 'role' => 'customer', 'phone' => '34567890129'],
+    ['name' => 'Customer User 10', 'email' => 'customer10@test.com', 'role' => 'customer', 'phone' => '345678901210'],
+];
+
+
+$events = [
+    ['title' => 'Music Festival 1', 'description' => 'This is a detailed description for manual event 1.', 'date' => now()->addDays(10)->format('Y-m-d H:i:s'), 'location' => 'City Arena 1', 'created_by' => 'Event Organizer X'],
+    ['title' => 'Music Festival 2', 'description' => 'This is a detailed description for manual event 2.', 'date' => now()->addDays(20)->format('Y-m-d H:i:s'), 'location' => 'City Arena 2', 'created_by' => 'Event Organizer X'],
+    ['title' => 'Music Festival 3', 'description' => 'This is a detailed description for manual event 3.', 'date' => now()->addDays(30)->format('Y-m-d H:i:s'), 'location' => 'City Arena 3', 'created_by' => 'Event Organizer X'],
+    ['title' => 'Music Festival 4', 'description' => 'This is a detailed description for manual event 4.', 'date' => now()->addDays(40)->format('Y-m-d H:i:s'), 'location' => 'City Arena 4', 'created_by' => 'Event Organizer X'],
+    ['title' => 'Music Festival 5', 'description' => 'This is a detailed description for manual event 5.', 'date' => now()->addDays(50)->format('Y-m-d H:i:s'), 'location' => 'City Arena 5', 'created_by' => 'Event Organizer X'],
+];
+
+
+$tickets = [
+    // Example for Event 1
+    ['event_title' => 'Music Festival 1', 'type' => 'VIP', 'price' => 3000, 'quantity' => 50],
+    ['event_title' => 'Music Festival 1', 'type' => 'Standard', 'price' => 2000, 'quantity' => 200],
+    ['event_title' => 'Music Festival 1', 'type' => 'Basic', 'price' => 1000, 'quantity' => 100],
+
+    // Example for Event 2
+    ['event_title' => 'Music Festival 2', 'type' => 'VIP', 'price' => 3000, 'quantity' => 50],
+    ['event_title' => 'Music Festival 2', 'type' => 'Standard', 'price' => 2000, 'quantity' => 200],
+    ['event_title' => 'Music Festival 2', 'type' => 'Basic', 'price' => 1000, 'quantity' => 100],
+
+    // And so on for all 5 events...
+];
+
+$bookings = [
+    ['user' => 'Customer User 1', 'ticket' => 'VIP - Music Festival 1', 'quantity' => 2, 'status' => 'confirmed', 'total_amount' => 6000],
+    ['user' => 'Customer User 2', 'ticket' => 'Basic - Music Festival 2', 'quantity' => 1, 'status' => 'confirmed', 'total_amount' => 1000],
+    ['user' => 'Customer User 3', 'ticket' => 'Standard - Music Festival 3', 'quantity' => 4, 'status' => 'confirmed', 'total_amount' => 8000],
+   
+
+  
+];
+
+
+
+$payments = [
+    ['booking_for' => 'Booking 1', 'amount' => 6000, 'status' => 'success'],
+    ['booking_for' => 'Booking 2', 'amount' => 1000, 'status' => 'success'],
+    ['booking_for' => 'Booking 3', 'amount' => 8000, 'status' => 'success'],
+    // ... up to 20 payments
+];
